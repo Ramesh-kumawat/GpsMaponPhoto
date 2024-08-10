@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background2"
+    tools:context=".ExitActivity">
+
+
+    <LinearLayout
+        android:id="@+id/ll_main"
+        android:layout_width="1080px"
+        android:layout_height="415px"
+        android:background="@drawable/exit_box"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Let us Knows how we're doing!"
+            android:layout_gravity="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_15sdp"
+            android:fontFamily="@font/sourcesanspro_semibold"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="we are always trying to improve what we do and your feedback is invaluable!"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:fontFamily="@font/sourcesanspro_regular"
+            android:paddingLeft="@dimen/_13sdp"
+            android:textSize="@dimen/_13sdp"
+            android:paddingRight="@dimen/_13sdp"
+
+            />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/_5sdp"
+            >
+            <ImageView
+                android:id="@+id/one"
+                android:layout_width="84px"
+                android:layout_height="84px"
+                android:src="@drawable/star_unfill"
+                android:layout_marginRight="50px"
+                />
+            <ImageView
+                android:id="@+id/two"
+
+                android:layout_width="84px"
+                android:layout_height="84px"
+                android:src="@drawable/star_unfill"
+                android:layout_marginRight="50px"
+                />
+            <ImageView
+                android:id="@+id/three"
+
+                android:layout_width="84px"
+                android:layout_height="84px"
+                android:src="@drawable/star_unfill"
+                android:layout_marginRight="50px"
+                />
+            <ImageView
+                android:id="@+id/four"
+
+                android:layout_width="84px"
+                android:layout_height="84px"
+                android:src="@drawable/star_unfill"
+                android:layout_marginRight="50px"
+                />
+            <ImageView
+                android:id="@+id/five"
+                android:layout_width="84px"
+                android:layout_height="84px"
+                android:layout_marginRight="@dimen/_3sdp"
+                android:src="@drawable/star_unfill"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+<ImageView
+    android:id="@+id/exit_btn"
+    android:layout_width="468px"
+    android:layout_height="146px"
+    android:src="@drawable/exit_btn"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    android:layout_marginBottom="220px"
+    />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView
+        android:id="@+id/txt_full_add"
+        android:layout_width="159dp"
+        android:layout_height="31dp"
+        android:ellipsize="end"
+        android:maxLines="4"
+        android:text=" 08734, USA dfn  fd, fg"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_8sdp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/constraintLayout4"
+        app:layout_constraintEnd_toEndOf="@+id/constraintLayout4"
+        app:layout_constraintStart_toStartOf="@+id/constraintLayout4" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!--        <ImageView-->
+        <!--            android:id="@+id/imageViewhumidity"-->
+        <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintTop_toTopOf="parent"-->
+        <!--            android:layout_width="19dp"-->
+        <!--            android:layout_height="19dp"-->
+        <!--            android:src="@drawable/weather_ic" />-->
+
+
+        <ImageView
+            android:id="@+id/sticker_icon"
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="@dimen/_80sdp"
+            android:src="@drawable/sticker_7"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/txt_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_37sdp"
+            android:layout_marginLeft="@dimen/_30sdp"
+            android:gravity="right"
+            android:fontFamily="@font/sourcesanspro_bold"
+            android:ellipsize="marquee"
+            android:singleLine="true"
+            android:text="sdfsfdsfstyutut"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_9sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txt_coma"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:maxLines="1"
+            android:fontFamily="@font/sourcesanspro_bold"
+
+            android:text=", "
+            android:textColor="@color/white"
+            android:textSize="@dimen/_9sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/txt_add"
+            app:layout_constraintStart_toEndOf="@+id/txt_add"
+            app:layout_constraintTop_toTopOf="@+id/txt_add"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/txt_add_1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:fontFamily="@font/sourcesanspro_bold"
+
+            android:ellipsize="end"
+            android:text="fhdfhgfghfgfgfhffhgf"
+            android:paddingRight="@dimen/_4sdp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_9sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/txt_coma"
+            app:layout_constraintEnd_toStartOf="@+id/txt_time"
+            app:layout_constraintStart_toEndOf="@+id/txt_coma"
+            app:layout_constraintTop_toTopOf="@+id/txt_coma"
+            app:layout_constraintVertical_bias="0.0" />
+
+
+        <TextClock
+            android:id="@+id/txt_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_34sdp"
+            android:format12Hour="hh:mm aa"
+            android:format24Hour="hh:mm aa"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="11:25 pm"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_7sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/sticker_icon"
+            app:layout_constraintVertical_bias="0.583" />
+
+        <TextClock
+            android:id="@+id/txt_date"
+            android:layout_width="159dp"
+            android:layout_height="31dp"
+            android:ellipsize="end"
+            android:maxLines="4"
+            android:text=" 0343344"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_8sdp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/constraintLayout4"
+            app:layout_constraintEnd_toEndOf="@+id/constraintLayout4"
+            app:layout_constraintStart_toStartOf="@+id/constraintLayout4" />
+
+
+        <TextView
+            android:id="@+id/txt_lat_log"
+            android:layout_width="118dp"
+            android:layout_height="16dp"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="Lat 51.1457896  Long 60.2457893"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_5sdp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.838"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_time"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/txt_humidity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_12sdp"
+            android:gravity="center"
+            android:text="37 F"
+            android:fontFamily="@font/sourcesanspro_regular"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_5sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/sticker_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/sticker_icon"
+            app:layout_constraintVertical_bias="0.540" />
+
+        <TextView
+            android:id="@+id/txt_temp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="37 F"
+            android:layout_marginTop="@dimen/_1sdp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_5sdp"
+            android:fontFamily="@font/sourcesanspro_regular"
+            app:layout_constraintEnd_toEndOf="@+id/txt_humidity"
+            app:layout_constraintStart_toStartOf="@+id/txt_humidity"
+            app:layout_constraintTop_toBottomOf="@+id/txt_humidity" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

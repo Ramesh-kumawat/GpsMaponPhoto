@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".map_activity">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/googal_map"
+        android:layout_width="1080px"
+        android:layout_height="1123px"
+        android:layout_marginBottom="-75px"
+        app:layout_constraintBottom_toTopOf="@+id/cl_all_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/img_minus"
+            android:layout_width="74px"
+            android:layout_height="74px"
+            android:layout_marginRight="50px"
+            android:layout_marginBottom="130px"
+            android:src="@drawable/zoomout_btn"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <ImageView
+            android:id="@+id/img_find_loaction"
+            android:layout_width="95px"
+            android:layout_height="95px"
+            android:layout_marginTop="250px"
+            android:layout_marginRight="50px"
+            android:src="@drawable/gps_btn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/img_plus"
+            android:layout_width="74px"
+            android:layout_height="74px"
+            android:layout_marginRight="10px"
+            android:src="@drawable/zoom_btn"
+            app:layout_constraintBottom_toBottomOf="@+id/img_minus"
+            app:layout_constraintEnd_toStartOf="@+id/img_minus"
+            app:layout_constraintTop_toTopOf="@+id/img_minus" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_all_layout"
+        android:layout_width="1080px"
+        android:layout_height="872px"
+        android:background="@drawable/blackbox"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:id="@+id/liner_latlong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_19sdp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:id="@+id/ll_latitude"
+                android:layout_width="482px"
+                android:layout_height="144px"
+                android:layout_gravity="bottom"
+                android:layout_weight="1"
+                android:background="@drawable/latitude"
+                android:gravity="center"
+                android:orientation="vertical">
+
+
+                <EditText
+                    android:id="@+id/latitude"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:paddingLeft="@dimen/_7sdp"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_10sdp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_longitude"
+                android:layout_width="482px"
+                android:layout_height="144px"
+                android:layout_weight="1"
+                android:background="@drawable/longitude"
+                android:gravity="center"
+                android:orientation="vertical">
+
+
+                <EditText
+                    android:id="@+id/longitude"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:paddingLeft="@dimen/_7sdp"
+                    android:textColor="@color/white"
+                    android:textColorHighlight="@color/black"
+                    android:textSize="@dimen/_10sdp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+
+            app:layout_constraintTop_toBottomOf="@+id/liner_latlong">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/ll_location"
+                        android:layout_width="950px"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:background="@drawable/boundry_box"
+                        android:orientation="vertical"
+                        android:text="Location"
+                        android:textColor="@color/white">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginTop="-4dp"
+                            android:background="#212121"
+                            android:fontFamily="@font/sourcesanspro_regular"
+                            android:paddingLeft="@dimen/_4sdp"
+                            android:paddingRight="@dimen/_2sdp"
+                            android:text="Location"
+                            android:textColor="#A8A8A8"
+                            android:textSize="@dimen/_10sdp" />
+
+                        <TextView
+                            android:id="@+id/address_map"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:enabled="false"
+                            android:padding="@dimen/_4sdp"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_12sdp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginTop="@dimen/_7sdp"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <LinearLayout
+                            android:id="@+id/ll_city"
+                            android:layout_width="482px"
+                            android:layout_height="144px"
+                            android:background="@drawable/city"
+                            android:gravity="center">
+
+                            <TextView
+                                android:id="@+id/city_map"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:enabled="false"
+                                android:paddingLeft="@dimen/_7sdp"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_10sdp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_state"
+                            android:layout_width="482px"
+                            android:layout_height="144px"
+                            android:background="@drawable/state"
+                            android:gravity="center">
+
+                            <TextView
+                                android:id="@+id/state_map"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:enabled="false"
+                                android:paddingLeft="@dimen/_7sdp"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_10sdp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_country"
+                        android:layout_width="482px"
+                        android:layout_height="144px"
+                        android:layout_gravity="left"
+                        android:background="@drawable/country"
+                        android:layout_marginTop="25px"
+                        android:layout_marginLeft="60px"
+                        android:gravity="center"
+
+
+                        >
+
+                        <TextView
+                            android:id="@+id/country_map"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:enabled="false"
+
+                            android:paddingLeft="@dimen/_7sdp"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_10sdp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_Layout"
+        android:layout_width="1080px"
+        android:layout_height="231px"
+        android:background="@drawable/header_map"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/setting_Back_btn"
+            android:layout_width="60px"
+            android:layout_height="65px"
+            android:padding="10px"
+            android:layout_marginLeft="70px"
+            android:layout_marginTop="55px"
+            android:src="@drawable/back_btn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/setting_apply_btn"
+            android:layout_width="203px"
+            android:layout_height="102px"
+            android:layout_marginTop="27px"
+            android:layout_marginRight="60px"
+            android:src="@drawable/done_btn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sourcesanspro_semibold"
+            android:text="Gps Map On Photo"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_17sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/setting_apply_btn"
+            app:layout_constraintHorizontal_bias="0.572"
+            app:layout_constraintStart_toEndOf="@+id/setting_Back_btn"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.258" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

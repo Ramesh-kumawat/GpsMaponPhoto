@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/transparent"
+
+
+    >
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_rate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/ll_main_rate"
+            android:layout_width="800px"
+            android:layout_height="445px"
+            android:layout_marginTop="210px"
+            android:background="@drawable/box_rate"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/sourcesanspro_semibold"
+                android:text="Let us Knows how we're doing!"
+                android:textColor="@color/black"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:textSize="@dimen/_12sdp"
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:fontFamily="@font/sourcesanspro_regular"
+                android:gravity="center"
+                android:paddingLeft="@dimen/_13sdp"
+                android:paddingRight="@dimen/_13sdp"
+                android:text="we are always trying to improve what we do and your feedback is invaluable!"
+                android:textSize="@dimen/_11sdp"
+
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/one_rate"
+                    android:layout_width="84px"
+                    android:layout_height="84px"
+                    android:layout_marginRight="50px"
+                    android:src="@drawable/star_unfill" />
+
+                <ImageView
+                    android:id="@+id/two_rate"
+                    android:layout_width="84px"
+                    android:layout_height="84px"
+                    android:layout_marginRight="50px"
+                    android:src="@drawable/star_unfill" />
+
+                <ImageView
+                    android:id="@+id/three_rate"
+                    android:layout_width="84px"
+                    android:layout_height="84px"
+                    android:layout_marginRight="50px"
+                    android:src="@drawable/star_unfill" />
+
+                <ImageView
+                    android:id="@+id/four_rate"
+
+                    android:layout_width="84px"
+                    android:layout_height="84px"
+                    android:layout_marginRight="50px"
+                    android:src="@drawable/star_unfill" />
+
+                <ImageView
+                    android:id="@+id/five_rate"
+                    android:layout_width="84px"
+                    android:layout_height="84px"
+                    android:layout_marginRight="@dimen/_3sdp"
+                    android:src="@drawable/star_unfill" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="199px"
+            android:layout_height="279px"
+
+            android:src="@drawable/location_rate"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_270sdp"
+        android:fontFamily="@font/sourcesanspro_bold"
+        android:text="GPS Map On Photo"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_24sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/sourcesanspro_light"
+        android:gravity="center"
+        android:padding="@dimen/_12sdp"
+        android:text="This app will help you to save location details on a photo"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_14sdp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <ProgressBar
+        android:id="@+id/progressbar_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/overlary_main"
+        android:layout_width="1080px"
+        android:layout_height="1920px"
+        android:src="@drawable/overlayfull"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+        android:id="@+id/start_btn"
+        android:layout_width="435px"
+        android:layout_height="146px"
+        android:layout_marginTop="40px"
+        android:src="@drawable/start_btn"
+        app:layout_constraintEnd_toEndOf="@+id/textView1"
+        app:layout_constraintStart_toStartOf="@+id/textView1"
+        app:layout_constraintTop_toBottomOf="@+id/textView1" />
+
+    <ImageView
+        android:id="@+id/privacy_btn"
+        android:layout_width="91px"
+        android:layout_height="91px"
+        android:layout_marginLeft="15px"
+        android:src="@drawable/privacy_btn"
+        app:layout_constraintBottom_toBottomOf="@+id/rate_btn"
+        app:layout_constraintStart_toEndOf="@+id/rate_btn"
+        app:layout_constraintTop_toTopOf="@+id/rate_btn" />
+
+    <ImageView
+        android:id="@+id/rate_btn"
+        android:layout_width="91px"
+        android:layout_height="91px"
+        android:layout_marginTop="50px"
+        android:src="@drawable/rate_btn"
+        app:layout_constraintEnd_toEndOf="@+id/start_btn"
+        app:layout_constraintStart_toStartOf="@+id/start_btn"
+        app:layout_constraintTop_toBottomOf="@+id/start_btn" />
+
+    <ImageView
+        android:id="@+id/share_btn"
+        android:layout_width="91px"
+        android:layout_height="91px"
+        android:layout_marginRight="15px"
+        android:src="@drawable/share_btn"
+        app:layout_constraintBottom_toBottomOf="@+id/rate_btn"
+        app:layout_constraintEnd_toStartOf="@+id/rate_btn"
+        app:layout_constraintTop_toTopOf="@+id/rate_btn" />
+</androidx.constraintlayout.widget.ConstraintLayout>

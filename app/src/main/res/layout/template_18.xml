@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout4"
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="@dimen/_80sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.629"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.484">
+
+
+        <!--        <TextClock-->
+        <!--            android:id="@+id/txt_time"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginEnd="16dp"-->
+        <!--            android:format12Hour="hh:mm aa"-->
+        <!--            android:format24Hour="hh:mm aa"-->
+        <!--            android:gravity="center"-->
+        <!--            android:maxLines="1"-->
+        <!--            android:text="11:25 pm"-->
+        <!--            android:textColor="@color/white"-->
+        <!--            android:textSize="@dimen/_6sdp"-->
+        <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintTop_toTopOf="parent"-->
+        <!--            app:layout_constraintVertical_bias="0.4" />-->
+
+        <ImageView
+            android:id="@+id/sticker_icon"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/sticker_18"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/txt_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_42sdp"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:maxLines="1"
+            android:text="fdhfg"
+            android:fontFamily="@font/sourcesanspro_semibold"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txt_coma"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:text=","
+            android:fontFamily="@font/sourcesanspro_semibold"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/txt_add"
+            app:layout_constraintStart_toEndOf="@+id/txt_add"
+            app:layout_constraintTop_toTopOf="@+id/txt_add"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextClock
+            android:id="@+id/txt_date"
+            android:layout_width="159dp"
+            android:layout_height="31dp"
+            android:ellipsize="end"
+            android:maxLines="4"
+            android:text=" 0343344"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_8sdp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/constraintLayout4"
+            app:layout_constraintEnd_toEndOf="@+id/constraintLayout4"
+            app:layout_constraintStart_toStartOf="@+id/constraintLayout4" />
+        <TextView
+            android:id="@+id/txt_add_1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12sdp"
+            android:fontFamily="@font/sourcesanspro_semibold"
+             android:layout_marginRight="@dimen/_26sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/txt_coma"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/txt_coma"
+            app:layout_constraintTop_toTopOf="@+id/txt_coma"
+            app:layout_constraintVertical_bias="0.0" />
+
+
+        <TextClock
+            android:id="@+id/txt_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:format12Hour="MMM dd,yyyy"
+            android:format24Hour="MMM dd,yyyy"
+            android:gravity="center"
+            android:fontFamily="@font/sourcesanspro_regular"
+            android:maxLines="1"
+            android:text="mar 16 2022"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_9sdp"
+            app:layout_constraintStart_toStartOf="@+id/txt_add"
+            app:layout_constraintTop_toBottomOf="@+id/txt_add" />
+
+        <TextView
+            android:id="@+id/txt_lat_log"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:gravity="center"
+            android:fontFamily="@font/sourcesanspro_regular"
+            android:maxLines="1"
+            android:text="Lat 51.14     Long 60.24"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_6sdp"
+            app:layout_constraintStart_toStartOf="@+id/txt_temp"
+            app:layout_constraintTop_toBottomOf="@+id/txt_temp" />
+
+        <TextView
+            android:id="@+id/txt_temp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:gravity="center"
+            android:text="37 F"
+            android:fontFamily="@font/sourcesanspro_regular"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12sdp"
+            app:layout_constraintStart_toStartOf="@+id/txt_time"
+            app:layout_constraintTop_toBottomOf="@+id/txt_time" />
+
+        <TextView
+            android:id="@+id/txt_humidity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="32dp"
+            android:gravity="center"
+            android:text="37 F"
+            android:visibility="gone"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_10sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_add_1" />
+
+        <TextView
+            android:id="@+id/txt_full_add"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:visibility="gone"
+            android:maxLines="4"
+            android:text=" 08734, USA dfn  fd, fg"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_6sdp"
+            app:layout_constraintEnd_toEndOf="@+id/sticker_icon"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/sticker_icon"
+            app:layout_constraintTop_toBottomOf="@+id/txt_add" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

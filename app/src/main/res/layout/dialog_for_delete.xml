@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="858px"
+
+    android:background="@drawable/box_save"
+    android:layout_height="570px"
+    android:id="@+id/main_box"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/photo"
+        android:layout_width="89px"
+        android:layout_height="82px"
+        android:layout_gravity="center"
+        android:src="@drawable/photo"
+        android:layout_marginTop="40px"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete Photo"
+        android:layout_gravity="center"
+        android:textColor="#EE5256"
+        android:layout_marginTop="@dimen/_7sdp"
+        android:textSize="@dimen/_15sdp"
+
+        android:fontFamily="@font/sourcesanspro_semibold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginBottom="@dimen/_12sdp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Do you want to delete this photo ?"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_gravity="center"
+        android:fontFamily="@font/sourcesanspro_regular"
+        android:textColor="@color/black"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:textSize="@dimen/_15sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginBottom="@dimen/_12sdp"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/unsave"
+            android:layout_width="320px"
+            android:layout_height="115px"
+            android:layout_weight="1"
+            android:layout_marginRight="50px"
+            android:src="@drawable/keep_btn" />
+        <ImageView
+            android:id="@+id/save"
+            android:layout_width="320px"
+            android:layout_height="115px"
+            android:layout_weight="1"
+            android:src="@drawable/delete_main_btn" />
+
+
+    </LinearLayout>
+</LinearLayout>
